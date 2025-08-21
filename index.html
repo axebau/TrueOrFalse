@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego Verdadero/Falso</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Pantalla de inicio -->
+  <div id="start-screen" class="screen active">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo Pedaglopedia" class="logo">
+    </div>
+    <h1 class="game-title">Pedaglopedia</h1>
+    <p class="subtitle">El juego de verdadero y falso</p>
+
+    <div class="menu">
+      <button class="menu-btn easy" onclick="startGame('facil')">
+        🎯 Juego Fácil <span>10 preguntas</span>
+      </button>
+
+      <button class="menu-btn time" onclick="startGame('contratiempo')">
+        ⏳ Contratiempo <span>Responde rápido</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Pantalla del juego -->
+  <div id="game-screen" class="screen">
+    <!-- Temporizador (centro arriba) -->
+<div id="timer-container" class="timer" style="display: none;">
+  <span id="timer-display">0:05</span>
+  <button id="timer-start" onclick="toggleTimer()">
+    <i class="bi bi-pause-fill"></i>
+  </button>
+</div>
+
+    <!-- Contador de puntaje y pregunta (derecha arriba) -->
+    <div id="score-container">
+      <div id="score-display">Puntos: 0</div>
+      <div id="question-counter">Pregunta: 1/10</div>
+    </div>
+
+    <button id="exit-button" class="btn btn-danger btn-lg">
+  <i class="bi bi-box-arrow-left me-2"></i> Salir
+</button>
+
+
+    <!-- Pregunta -->
+    <h1 id="question"></h1>
+
+    <!-- Botones -->
+    <div class="answer-buttons">
+      <button class="btn-true" onclick="answer(true)"> <i class="bi bi-check-lg me-2"></i> Verdadero</button>
+      <button class="btn-false" onclick="answer(false)"> <i class="bi bi-x-lg me-2"></i>Falso</button>
+    </div>
+
+    
+  </div>
+
+  <!-- Pantalla de resultados -->
+  <div id="result-screen" class="screen">
+   
+  <div class="container mt-4">
+  <div class="card shadow-lg p-4">
+    <h2 class="card-title text-center mb-3">Resultados</h2>
+
+    <div class="row mb-3 text-center">
+      <div class="col-md-4 mb-2">
+        <div class="p-3 bg-success text-white rounded h-100 d-flex flex-column justify-content-center">
+          <h4 id="correct-count">Correctas: 0</h4>
+        </div>
+      </div>
+      <div class="col-md-4 mb-2">
+        <div class="p-3 bg-danger text-white rounded h-100 d-flex flex-column justify-content-center">
+          <h4 id="incorrect-count">Incorrectas: 0</h4>
+        </div>
+      </div>
+      <div class="col-md-4 mb-2">
+        <div class="p-3 bg-primary text-white rounded h-100 d-flex flex-column justify-content-center">
+          <h4 id="correct-percentage">0%</h4>
+          <small>Porcentaje de aciertos</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <h5 class="text-success">Preguntas correctas:</h5>
+        <ul id="correct-answers" class="list-group list-group-flush"></ul>
+      </div>
+      <div class="col-md-6 mb-3">
+        <h5 class="text-danger">Preguntas incorrectas:</h5>
+        <ul id="wrong-answers" class="list-group list-group-flush"></ul>
+      </div>
+    </div>
+
+    <div class="text-center mt-3">
+        <button class="btn btn-primary" onclick="goHome()">
+    <i class="bi bi-house-door-fill me-2"></i> Volver al inicio
+  </button>
+    </div>
+  </div>
+</div>
+
+
+
+  </div>
+
+  <!-- Animaciones -->
+  <div id="error-animation" class="game-error-animation">
+    <div class="error-flash"></div>
+    <div class="error-text-big">¡ERROR!</div>
+    <div class="error-subtitle">Respuesta incorrecta</div>
+  </div>
+
+  <div id="success-animation" class="game-success-animation">
+    <div class="success-flash"></div>
+    <div class="success-text-big">¡CORRECTO!</div>
+    <div class="success-subtitle">¡Bien hecho!</div>
+  </div>
+
+  <div id="time-animation" class="game-time-animation">
+    <div class="time-flash"></div>
+    <div class="time-text-big">¡TIEMPO!</div>
+    <div class="time-subtitle">Se acabó el tiempo</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

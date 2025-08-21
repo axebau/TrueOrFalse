@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Andragogía",
+    "text": "Estudia cómo se desarrollan las capacidades formativas en personas en etapa madura.",
+    "answer": true
+  },
+  {
+    "title": "Andragogía",
+    "text": "Se enfoca en la preparación de niños durante sus primeros años de escolaridad.",
+    "answer": false
+  },
+  {
+    "title": "Constructivismo",
+    "text": "Postula que el sujeto genera su saber a partir de lo que ya ha vivido.",
+    "answer": true
+  },
+  {
+    "title": "Constructivismo",
+    "text": "Sostiene que todo saber debe transmitirse de forma directa, sin participación previa del sujeto.",
+    "answer": false
+  },
+  {
+    "title": "Zona de Desarrollo Próximo (ZDP)",
+    "text": "Describe el margen entre lo que una persona puede lograr y lo que alcanza al ser orientada.",
+    "answer": true
+  },
+  {
+    "title": "Zona de Desarrollo Próximo (ZDP)",
+    "text": "Define el momento exacto en que una persona domina completamente un contenido sin esfuerzo.",
+    "answer": false
+  },
+  {
+    "title": "Aprendizaje Significativo",
+    "text": "Explica cómo incorporar nuevos saberes cuando estos tienen sentido con lo que ya se conoce.",
+    "answer": true
+  },
+  {
+    "title": "Aprendizaje Significativo",
+    "text": "Describe la forma más rápida de memorizar datos sin conexión con información anterior.",
+    "answer": false
+  },
+  {
+    "title": "Currículum Oculto",
+    "text": "Refiere a lo que se transmite de manera implícita dentro de un contexto formativo.",
+    "answer": true
+  },
+  {
+    "title": "Currículum Oculto",
+    "text": "Es el listado oficial de asignaturas que forman parte de un plan formal.",
+    "answer": false
+  },
+  {
+    "title": "Metacognición",
+    "text": "Implica darse cuenta de cómo uno mismo maneja su forma de razonar.",
+    "answer": true
+  },
+  {
+    "title": "Metacognición",
+    "text": "Es la forma automática en que se ejecutan tareas sin análisis ni conciencia.",
+    "answer": false
+  }
+]
